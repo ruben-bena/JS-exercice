@@ -1,7 +1,11 @@
-// Ejecutar --> node index.js
-console.log("hola")
-const readline = require('readline').promises
-main()
+import { Board } from "./src/board.js"
+import { Game } from "./src/game.js"
+
+var game = new Game()
+game.board.putRandomTreasures(game.maxTreasures)
+console.log(game.board.toString())
+
+//const readline = require('readline').promises
 
 function main() {
     var board = generateNewBoard()
@@ -10,7 +14,8 @@ function main() {
     var cheatMode = false
     while (remainingIntents > 0) {
         printBoard(board)
-        askUserInput()
+        // askUserInput()
+        remainingIntents--
     }
 }
 
