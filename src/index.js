@@ -6,8 +6,13 @@ const game = new Game()
 const consoleRenderer = new ConsoleRenderer()
 const saveManager = new SaveManager()
 
-while (game.triesLeft > 0) {
+while (!game.isGameOver && !game.isVictory) {
+    // Dibujar partida
     consoleRenderer.render(game)
-    game.triesLeft--
-    console.log(game.triesLeft)
+
+    // TODO Pedir input
+
+    // TODO Gestionar input y convertirlo en acción
 }
+
+// TODO Imprimir resultado partida
