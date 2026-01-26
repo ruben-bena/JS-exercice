@@ -35,4 +35,21 @@ export default class Board {
     getSquare(position) {
         return this.board[position.row][position.col]
     }
+
+    toJSON() {
+        return {
+            board: this.board.map(row =>
+                row.map(square =>
+                    square.toJSON())
+            )
+        }
+    }
+
+    static fromJSON(data) {
+        const board = new Board()
+        board.board = data.board.map(row =>
+            row.map(squareData => Square.fromJSON(squareData))
+        )
+        return board
+    }
 }

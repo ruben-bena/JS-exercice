@@ -4,11 +4,31 @@ export default class Game {
     board
     isGameOver = false
     isVictory = false
-    cheatsEnables = false
+    cheatsEnabled = false
     initialTries = 32
-    tiresLeft = this.initialTries
+    triesLeft = this.initialTries
 
     constructor() {
         this.board = new Board()
+    }
+
+    toJSON() {
+        return {
+            board: this.board.toJSON(),
+            isGameOver: this.isGameOver,
+            isVictory: this.isVictory,
+            cheatsEnabled: this.cheatsEnabled,
+            initialTries: this.initialTries,
+            triesLeft: this.triesLeft
+        }
+    }
+
+    fromJSON(data) {
+        this.board = Board.fromJSON(data.board)
+        this.isGameOver = data.isGameOver
+        this.isVictory = data.isVictory
+        this.cheatsEnabled = data.cheatsEnabled
+        this.initialTries = data.initialTries
+        this.triesLeft = data.triesLeft
     }
 }
