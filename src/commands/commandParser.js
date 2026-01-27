@@ -1,48 +1,51 @@
+import CheatCommand from './cheatCommand.js'
+
 export default class CommandParser {
     parse(input) {
-        normalizedInput = input.trim().toLowerCase()
-        if (normalizedInput.length() === 0) {
+        const normalizedInput = input.trim().toLowerCase()
+        if (normalizedInput.length === 0) {
             return null
         }
 
         // Ayuda
         if (normalizedInput === 'ajuda' || normalizedInput === 'help') {
-            return HelpCommand();
+            return new HelpCommand();
         }
 
         // Trucos
         if (normalizedInput === 'trampes' || normalizedInput === 'cheats') {
-            return CheatCommand();
+            return new CheatCommand();
         }
 
         // Puntuación
         if (normalizedInput === 'puntuacio' || normalizedInput === 'score') {
-            return ScoreCommand();
+            return new ScoreCommand();
         }
 
         // Destapar casilla
         if (normalizedInput.length === 2) {
             const position = parsePosition(normalizedInput)
             if (position !== null) {
-                return RevealPositionCommand(position);
+                return new RevealPositionCommand(position);
             }
         }
 
         // Guardar y cargar partida
         const parts = normalizedInput.split(" ")
-        if (parts.length() === 3) {
+        if (parts.length === 3) {
             const fileName = parts[2]
             if (parts[1] === 'partida' || parts[1] === 'game') {
                 if (parts[0] === 'carregar' || parts[0] === 'load') {
-                    return LoadGameCommand(fileName)
+                    return new LoadGameCommand(fileName)
                 }
                 if (parts[0] === 'guardar' || parts[0] === 'save') {
-                    return SaveGameCommand(fileName)
+                    return new SaveGameCommand(fileName)
                 }
             }
         }
 
         // Si no ha sido validado ya --> Input inválido
+        return null
     }
 
     parsePosition(positionString) {
@@ -51,12 +54,12 @@ export default class CommandParser {
         }
         const row = positionString[0].codeUnitAt(0) - 'a'.codeUnitAt(0)
         const col = parseInt(positionString[1], 10)
-        return Position(row, col)
+        return new Position(row, col)
     }
 
     isInputValidPosition(input) {
         // Longitud válida
-        if (input.length() !== 2) {
+        if (input.length !== 2) {
             return false
         }
 

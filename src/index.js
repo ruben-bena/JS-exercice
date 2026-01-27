@@ -1,6 +1,7 @@
 import ConsoleRenderer from "./ui/consoleRenderer.js"
 import Game from './game/game.js'
 import CommandParser from "./commands/commandParser.js"
+import readline from 'node:readline/promises'
 
 const game = new Game()
 const consoleRenderer = new ConsoleRenderer()
