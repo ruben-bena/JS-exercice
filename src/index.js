@@ -15,7 +15,7 @@ while (!game.isGameOver && !game.isVictory) {
     consoleRenderer.render(game)
 
     // Pedir input
-    const input = await rl.question("escribe la orden: ")
+    const input = await rl.question("escribe: ")
 
     // Gestionar input y convertirlo en acción
     const command = commandParser.parse(input)

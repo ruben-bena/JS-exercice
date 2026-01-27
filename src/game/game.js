@@ -12,6 +12,10 @@ export default class Game {
         this.board = new Board()
     }
 
+    execute(command) {
+        command.execute()
+    }
+
     toJSON() {
         return {
             board: this.board.toJSON(),
