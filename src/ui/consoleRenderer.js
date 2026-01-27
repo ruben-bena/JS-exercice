@@ -5,22 +5,37 @@ export default class ConsoleRenderer {
     render(game) {
         // Cabecera
         const header = " 01234567"
-        console.log(header)
+        if (game.cheatsEnabled) {
+            console.log(header + " " + header)
+        } else {
+            console.log(header)
+        }
 
         // Filas
         for (let row=0; row<6; row++) {
             let rowLine = String.fromCharCode(65 + row)
+            let rowLineCheats = String.fromCharCode(65 + row)
             for (let col=0; col<8; col++) {
                 const position = new Position(row, col)
-                rowLine += this.getSymbol(game, position)
+                rowLine += this.getSymbol(game, position, false)
+                rowLineCheats += this.getSymbol(game, position, true)
             }
-            console.log(rowLine)
+            
+            if (game.cheatsEnabled) {
+                console.log(rowLine + " " + rowLineCheats)
+            } else {
+                console.log(rowLine)
+            }
         }
     }
 
-    getSymbol(game, position) {
+    getSymbol(game, position, cheatsEnabled) {
         if (game.board.getSquare(position).hasTreasure) {
-            return "#"
+            if (cheatsEnabled || game.board.getSquare(position).isRevealed) {
+                return "#"
+            }
+        } else if (game.board.getSquare(position).isRevealed) {
+            return " "
         }
         return "·"
     }
