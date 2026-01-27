@@ -13,7 +13,7 @@ export default class Game {
     }
 
     execute(command) {
-        command.execute()
+        command.execute(this)
     }
 
     toJSON() {
