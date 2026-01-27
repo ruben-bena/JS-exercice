@@ -1,9 +1,11 @@
 import AbstractCommand from './abstractCommand.js'
+import Position from '../game/position.js'
 
 export default class RevealPositionCommand extends AbstractCommand {
-    position
+    position = new Position(-1,-1)
 
     constructor(position) {
+        super()
         this.position = position
     }
 

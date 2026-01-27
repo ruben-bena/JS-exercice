@@ -1,4 +1,10 @@
 import CheatCommand from './cheatCommand.js'
+import HelpCommand from './helpCommand.js'
+import LoadGameCommand from './loadGameCommand.js'
+import RevealPositionCommand from './revealPositionCommand.js'
+import SaveGameCommand from './saveGameCommand.js'
+import ScoreCommand from './scoreCommand.js'
+import Position from '../game/position.js'
 
 export default class CommandParser {
     parse(input) {
@@ -24,7 +30,7 @@ export default class CommandParser {
 
         // Destapar casilla
         if (normalizedInput.length === 2) {
-            const position = parsePosition(normalizedInput)
+            const position = this.parsePosition(normalizedInput)
             if (position !== null) {
                 return new RevealPositionCommand(position);
             }
@@ -52,7 +58,7 @@ export default class CommandParser {
         if (!this.isInputValidPosition(positionString)) {
             return null
         }
-        const row = positionString[0].codeUnitAt(0) - 'a'.codeUnitAt(0)
+        const row = positionString[0].charCodeAt(0) - 'a'.charCodeAt(0)
         const col = parseInt(positionString[1], 10)
         return new Position(row, col)
     }
@@ -67,13 +73,13 @@ export default class CommandParser {
         const colChar = input[1]
 
         // Fila válida
-        if (rowChar.codeUnitAt(0) < 'a'.codeUnitAt(0) || rowChar.codeUnitAt(0) < 'f'.codeUnitAt(0)) {
+        if (rowChar.charCodeAt(0) < 'a'.charCodeAt(0) || rowChar.charCodeAt(0) > 'f'.charCodeAt(0)) {
             return false
         }
 
         // Columna válida
         const col = parseInt(colChar, 10)
-        if (Number.isNaN(col) || (col < 0 && col > 7)) {
+        if (Number.isNaN(col) || col < 0 || col > 7) {
             return false
         }
 
