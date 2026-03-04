@@ -7,6 +7,7 @@ export default class Game {
     cheatsEnabled = false
     initialTries = 32
     triesLeft = this.initialTries
+    currentScore = 0
 
     constructor() {
         this.board = new Board()
