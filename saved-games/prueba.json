@@ -1,0 +1,215 @@
+{
+  "board": {
+    "board": [
+      [
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        }
+      ],
+      [
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        }
+      ],
+      [
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        }
+      ],
+      [
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        }
+      ],
+      [
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        }
+      ],
+      [
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": false
+        }
+      ]
+    ]
+  },
+  "isGameOver": false,
+  "isVictory": false,
+  "cheatsEnabled": false,
+  "initialTries": 32,
+  "triesLeft": 32
+}

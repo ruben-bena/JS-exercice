@@ -9,7 +9,7 @@ export default class SaveManager {
         try {
             const saveData = JSON.stringify(game.toJSON(), null, 2)
             await fs.writeFile(filePath, saveData, 'utf-8')
-            console.log(`Dades escrites a ${filePath}`)
+            // console.log(`Dades escrites a ${filePath}`)
         } catch (error) {
             console.error("Error en escriure les dades:", error)
         }
