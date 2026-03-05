@@ -11,7 +11,7 @@ const rl = readline.createInterface({
         output: process.stdout
     })
 
-while (!game.isGameOver && !game.isVictory) {
+while (!game.isGameOver) {
     // Dibujar partida
     consoleRenderer.render(game)
 
@@ -24,3 +24,5 @@ while (!game.isGameOver && !game.isVictory) {
         game.execute(command)
     }
 }
+
+console.log("partida acabada")

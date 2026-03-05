@@ -9,6 +9,12 @@ export default class Square {
         }
     }
 
+    revealPosition() {
+        if (!this.isRevealed) {
+            this.isRevealed = true
+        }
+    }
+
     static fromJSON(data) {
         const square = new Square()
         square.hasTreasure = data.hasTreasure

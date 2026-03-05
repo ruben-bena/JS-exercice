@@ -15,6 +15,19 @@ export default class Game {
 
     execute(command) {
         command.execute(this)
+        this.updateGameState()
+    }
+
+    updateGameState() {
+        const playerHasLost = !this.board.thereAreUncoveredTreasures() && this.triesLeft > 0
+        const playerHasWon = this.board.thereAreUncoveredTreasures() && this.triesLeft === 0
+
+        if (playerHasLost || playerHasWon) {
+            this.isGameOver = true
+            if (playerHasWon) {
+                this.isVictory = true
+            }
+        }
     }
 
     toJSON() {

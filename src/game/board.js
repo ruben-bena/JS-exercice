@@ -36,6 +36,44 @@ export default class Board {
         return this.board[position.row][position.col]
     }
 
+    thereAreUncoveredTreasures() {
+        for (const row of this.board) { 
+            for (const square of row) {
+                const thereIsAnUncoveredTreasure = square.hasTreasure && !square.isRevealed
+                if (thereIsAnUncoveredTreasure) {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
+    numberOfSquaresToClosestTreasure(referencePosition) {
+        let currentMinimum = Number.MAX_SAFE_INTEGER
+        for (let i=0; i<this.rows; i++) {
+            for (let j=0; j<this.cols; j++) {
+                const imLookingAtMyself = i === referencePosition.row && j === referencePosition.j
+                if (imLookingAtMyself) {
+                    continue
+                }
+                const comparedPosition = new Position(i, j)
+                const comparedSquare = this.getSquare(comparedPosition)
+                const positionHasUncoveredTreasure = comparedSquare.hasTreasure && !comparedSquare.isRevealed
+                if (positionHasUncoveredTreasure) {
+                    const calculatedDistance = this.getDistanceBetweenThesePositions(referencePosition, comparedPosition)
+                    if (calculatedDistance < currentMinimum) {
+                        currentMinimum = calculatedDistance
+                    }
+                }
+            }
+        }
+        return currentMinimum
+    }
+
+    getDistanceBetweenThesePositions(firstPosition, secondPosition) {
+        return Math.abs(firstPosition.row - secondPosition.row) + Math.abs(firstPosition.col - secondPosition.col)
+    }
+
     toJSON() {
         return {
             board: this.board.map(row =>
