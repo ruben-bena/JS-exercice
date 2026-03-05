@@ -3,11 +3,49 @@
     "board": [
       [
         {
+          "hasTreasure": true,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": false
+        }
+      ],
+      [
+        {
           "hasTreasure": false,
           "isRevealed": true
         },
         {
           "hasTreasure": false,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": true,
           "isRevealed": true
         },
         {
@@ -27,11 +65,7 @@
           "isRevealed": true
         },
         {
-          "hasTreasure": true,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": true,
+          "hasTreasure": false,
           "isRevealed": true
         }
       ],
@@ -49,11 +83,11 @@
           "isRevealed": true
         },
         {
-          "hasTreasure": true,
+          "hasTreasure": false,
           "isRevealed": true
         },
         {
-          "hasTreasure": true,
+          "hasTreasure": false,
           "isRevealed": true
         },
         {
@@ -71,80 +105,12 @@
       ],
       [
         {
-          "hasTreasure": true,
-          "isRevealed": true
-        },
-        {
           "hasTreasure": false,
           "isRevealed": true
         },
         {
           "hasTreasure": false,
           "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        }
-      ],
-      [
-        {
-          "hasTreasure": true,
-          "isRevealed": false
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": false
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": true,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        }
-      ],
-      [
-        {
-          "hasTreasure": false,
-          "isRevealed": false
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": false
         },
         {
           "hasTreasure": true,
@@ -173,22 +139,6 @@
       ],
       [
         {
-          "hasTreasure": true,
-          "isRevealed": false
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": false
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
-          "hasTreasure": false,
-          "isRevealed": true
-        },
-        {
           "hasTreasure": false,
           "isRevealed": true
         },
@@ -202,6 +152,56 @@
         },
         {
           "hasTreasure": false,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": true
+        }
+      ],
+      [
+        {
+          "hasTreasure": false,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": false,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": true,
+          "isRevealed": true
+        },
+        {
+          "hasTreasure": true,
           "isRevealed": true
         }
       ]
@@ -211,5 +211,6 @@
   "isVictory": false,
   "cheatsEnabled": true,
   "initialTries": 32,
-  "triesLeft": 4
+  "triesLeft": 7,
+  "currentScore": 15
 }

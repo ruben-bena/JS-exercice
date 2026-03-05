@@ -25,4 +25,10 @@ while (!game.isGameOver) {
     }
 }
 
-console.log("partida acabada")
+if (game.isVictory) {
+    const triesUsed = game.initialTries - game.triesLeft
+    console.log(`Has guanyat amb només ${triesUsed} tirades`)
+} else {
+    const treasuresLeft = game.board.getAmountOfUncoveredTreasures()
+    console.log(`Has perdut, queden ${treasuresLeft} tresors`)
+}

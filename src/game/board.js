@@ -36,16 +36,24 @@ export default class Board {
         return this.board[position.row][position.col]
     }
 
-    thereAreUncoveredTreasures() {
+    getAmountOfUncoveredTreasures() {
+        let amountOfUncoveredTreasures = 0
         for (const row of this.board) { 
             for (const square of row) {
                 const thereIsAnUncoveredTreasure = square.hasTreasure && !square.isRevealed
                 if (thereIsAnUncoveredTreasure) {
-                    return true
+                    amountOfUncoveredTreasures++
                 }
             }
         }
-        return false
+        return amountOfUncoveredTreasures
+    }
+
+    thereAreUncoveredTreasures() {
+        if (this.getAmountOfUncoveredTreasures() === 0) {
+            return false
+        }
+        return true
     }
 
     numberOfSquaresToClosestTreasure(referencePosition) {

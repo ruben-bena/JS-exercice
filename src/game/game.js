@@ -19,8 +19,8 @@ export default class Game {
     }
 
     updateGameState() {
-        const playerHasLost = !this.board.thereAreUncoveredTreasures() && this.triesLeft > 0
-        const playerHasWon = this.board.thereAreUncoveredTreasures() && this.triesLeft === 0
+        const playerHasWon = !this.board.thereAreUncoveredTreasures() && this.triesLeft > 0
+        const playerHasLost = this.board.thereAreUncoveredTreasures() && this.triesLeft === 0
 
         if (playerHasLost || playerHasWon) {
             this.isGameOver = true
@@ -37,7 +37,8 @@ export default class Game {
             isVictory: this.isVictory,
             cheatsEnabled: this.cheatsEnabled,
             initialTries: this.initialTries,
-            triesLeft: this.triesLeft
+            triesLeft: this.triesLeft,
+            currentScore: this.currentScore
         }
     }
 
@@ -48,5 +49,6 @@ export default class Game {
         this.cheatsEnabled = data.cheatsEnabled
         this.initialTries = data.initialTries
         this.triesLeft = data.triesLeft
+        this.currentScore = data.currentScore
     }
 }
