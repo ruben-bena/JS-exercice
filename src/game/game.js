@@ -13,8 +13,8 @@ export default class Game {
         this.board = new Board()
     }
 
-    execute(command) {
-        command.execute(this)
+    async execute(command) {
+        await command.execute(this)
         this.updateGameState()
     }
 

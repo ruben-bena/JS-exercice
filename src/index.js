@@ -21,7 +21,7 @@ while (!game.isGameOver) {
     // Gestionar input y convertirlo en acción
     const command = commandParser.parse(input)
     if (command !== null) {
-        game.execute(command)
+        await game.execute(command)
     }
 }
 
